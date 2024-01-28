@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Partners Status and Benefits</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Travel Partners Status and Benefits</h1>
+<nav>
+<a href="/">Home</a>
+<a href="/status-benefits">Status and Benefits</a>
+<a href="/mapping">Mapping</a>
+<a href="/contact">Contact</a>
+</nav>
+<main>
+<section id="status-benefits">
+<h2>Status and Benefits</h2>
+<div class="table-responsive">
+<table class="table table-striped table-bordered">
+<thead>
+<tr>
+<th>Partner</th>
+<th>Status</th>
+<th>Benefits</th>
+</tr>
+</thead>
+<tbody>
+{% for partner in partners %}
+<tr>
+<td>{{ partner.name }}</td>
+<td>{{ partner.status }}</td>
+<td>{{ partner.benefits }}</td>
+</tr>
+{% endfor %}
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<footer>
+<p>Copyright 2023 Travel Partners Status and Benefits. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+
