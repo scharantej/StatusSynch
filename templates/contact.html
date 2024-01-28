@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Partners Status and Benefits</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Travel Partners Status and Benefits</h1>
+<nav>
+<a href="/">Home</a>
+<a href="/status-benefits">Status and Benefits</a>
+<a href="/mapping">Mapping</a>
+<a href="/contact">Contact</a>
+</nav>
+<main>
+<section id="contact">
+<h2>Contact Us</h2>
+{% if message %}
+<div class="alert alert-success">
+{{ message }}
+</div>
+{% endif %}
+<form action="/contact-form-submit" method="post">
+<div class="form-group">
+<label for="name">Name</label>
+<input type="text" name="name" id="name" class="form-control" required>
+</div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input type="email" name="email" id="email" class="form-control" required>
+</div>
+<div class="form-group">
+<label for="subject">Subject</label>
+<input type="text" name="subject" id="subject" class="form-control" required>
+</div>
+<div class="form-group">
+<label for="message">Message</label>
+<textarea name="message" id="message" class="form-control" rows="5" required></textarea>
+</div>
+<button type="submit" class="btn btn-primary">Send</button>
+</form>
+</section>
+</main>
+<footer>
+<p>Copyright 2023 Travel Partners Status and Benefits. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+
